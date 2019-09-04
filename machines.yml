@@ -1,27 +1,27 @@
-- name: platform
+- name: zabbix
   cpus: 1
   memory: 1024
-  hostname: platform.lab.com
-  ip: 192.168.66.10
+  hostname: zabbix.lab.com
+  ip: 192.168.99.10
   system: ubuntu/bionic64
 
-- name: automation
+- name: prometheus
   cpus: 1
   memory: 1024
-  hostname: automation.lab.com
-  ip: 192.168.66.20
+  hostname: prometheus.lab.com
+  ip: 192.168.99.11
   system: centos/7
 
-#- name: docker
-#  cpus: 1
-#  memory: 1024
-#  hostname: docker.lab.com
-#  ip: 192.168.66.30
-#  system: ubuntu/bionic64
+- name: 4flix
+  cpus: 1
+  memory: 1024
+  hostname: 4flix.lab.com
+  ip: 192.168.99.12
+  system: centos/7
 
-#- name: monitoring
-#  cpus: 1
-#  memory: 2048
-#  hostname: monitoring.lab.com
-#  ip: 192.168.66.40
-#  system: ubuntu/bionic64
+- name: graylog
+  cpus: 1
+  memory: 2048
+  hostname: graylog.lab.com
+  ip: 192.168.99.13
+  system: ubuntu/bionic64
