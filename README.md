@@ -15,7 +15,7 @@ O objetivo deste projeto é usar as funcionalidades aplicadas ao arquivo Vagrant
 Faça o download dos arquivos disponíveis neste projeto através do git:
 
 ```
-git clone https://github.com/jonathandalves/vagrant-4-labs.git
+git clone https://github.com/Raunex/vagrant-4-labs.git
 ```
 
 Acesse o diretório vagrant-4-labs e, através do arquivo machines.yml, personalize as características das máquinas virtuais que você deseja construír.
@@ -63,3 +63,4 @@ vagrant up --provision
 # Informações do Autor
 
 Criado por [Jonathan Dantas Alves](https://www.linkedin.com/in/jonathandantasalves/).
+Mantido por [Rauny Moreira](https://www.linkedin.com/in/rauny-moreira/).
