@@ -1,27 +1,27 @@
 - name: zabbix
   cpus: 1
   memory: 1024
-  hostname: zabbix.lab.com
+  hostname: zabbix.dexter.com.br
   ip: 192.168.99.10
   system: ubuntu/bionic64
 
 - name: prometheus
   cpus: 1
   memory: 1024
-  hostname: prometheus.lab.com
+  hostname: prometheus.dexter.com.br
   ip: 192.168.99.11
   system: centos/7
 
 - name: 4flix
   cpus: 1
   memory: 1024
-  hostname: 4flix.lab.com
+  hostname: 4flix.dexter.com.br
   ip: 192.168.99.12
   system: centos/7
 
 - name: graylog
   cpus: 1
   memory: 2048
-  hostname: graylog.lab.com
+  hostname: graylog.dexter.com.br
   ip: 192.168.99.13
   system: ubuntu/bionic64
