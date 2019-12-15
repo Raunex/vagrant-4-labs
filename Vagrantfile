@@ -36,9 +36,9 @@ Vagrant.configure("2") do |config|
       if server["name"] == "4flix"
         srv.vm.provision "shell", inline: <<-SHELL
     yum install epel-release python unzip git wget vim java-1.8.0-openjdk yum-utils device-mapper-persistent-data lvm2 -y
-    curl -O http://ftp.unicamp.br/pub/apache//jmeter/binaries/apache-jmeter-5.1.zip 
-    unzip apache-jmeter-5.1.zip
-    mv apache-jmeter-5.1/ /root
+    curl -O http://ftp.unicamp.br/pub/apache//jmeter/binaries/apache-jmeter-5.2.zip 
+    unzip apache-jmeter-5.2.zip
+    mv apache-jmeter-5.2/ /root
     yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
     wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
     rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
