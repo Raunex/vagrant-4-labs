@@ -30,11 +30,11 @@ Vagrant.configure("2") do |config|
       end
 
       if server["system"] == "ubuntu/bionic64"
-        srv.vm.provision "shell", inline: "apt-get update; apt-get install python3 python3-pip -y"
+        srv.vm.provision "shell", inline: "apt-get update; apt-get install python3 python3-pip -y; apt-get update; apt-get install -y software-properties-common; apt-add-repository --yes --update ppa:ansible/ansible; apt-get install -y ansible;"
       end
 
       if server["system"] == "centos/7"
-        srv.vm.provision "shell", inline:  "yum update; yum install epel-release python3 python3-pip policycoreutils-python git wget vim -y"
+        srv.vm.provision "shell", inline:  "yum update; yum install epel-release python3 python3-pip policycoreutils-python git wget vim -y; yum install -y ansible;"
       end
 
       if server["name"] == "4flix"
