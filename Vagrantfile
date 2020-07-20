@@ -30,15 +30,16 @@ Vagrant.configure("2") do |config|
       end
 
       if server["system"] == "ubuntu/bionic64"
-        srv.vm.provision "shell", inline: "apt install python python-pip -y"
+        srv.vm.provision "shell", inline: "apt-get update; apt-get install python3 python3-pip -y"
       end
 
       if server["system"] == "centos/7"
-        srv.vm.provision "shell", inline:  "yum install epel-release python python2-pip policycoreutils-python git wget vim -y"
+        srv.vm.provision "shell", inline:  "yum update; yum install epel-release python3 python3-pip policycoreutils-python git wget vim -y"
       end
 
       if server["name"] == "4flix"
         srv.vm.provision "shell", inline: <<-SHELL
+    yum update;
     yum install unzip java-1.8.0-openjdk yum-utils device-mapper-persistent-data lvm2 -y
     curl -O http://ftp.unicamp.br/pub/apache//jmeter/binaries/apache-jmeter-5.2.zip
     unzip apache-jmeter-5.2.zip
