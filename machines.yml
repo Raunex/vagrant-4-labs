@@ -21,7 +21,7 @@
 
 - name: graylog
   cpus: 1
-  memory: 2048
+  memory: 1024
   hostname: graylog.dexter.com.br
   ip: 192.168.99.13
   system: ubuntu/bionic64
