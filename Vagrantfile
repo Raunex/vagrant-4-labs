@@ -58,8 +58,12 @@ gpgkey=https://www.mongodb.org/static/pgp/server-3.6.asc" > /etc/yum.repos.d/mon
     systemctl enable jenkins docker
     systemctl start jenkins docker
     SHELL
-    end
+    end      
 
+      config.vm.provision "shell", inline: <<-SHELL
+     sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
+     systemctl restart sshd
+     SHELL
       config.vm.provision "shell", inline: "cp /vagrant/hosts /etc/hosts"
       config.vm.provision "shell", inline: "mkdir -p /root/.ssh"
       config.vm.provision "shell", inline: "cp /vagrant/id_rsa /root/.ssh/id_rsa"
